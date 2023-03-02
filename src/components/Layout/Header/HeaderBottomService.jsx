@@ -80,4 +80,107 @@ export const HeaderBottomMenu = [
     desc: "Get Instant 2% Cashback On Mobile Recharge",
   },
 ];
+
+export const RechargeMenu = [
+  {
+    img: Recharge,
+    title: "Recharge",
+    route: "/services/mobileRecharge",
+    desc: "Get Instant 2% Cashback On Mobile Recharge",
+  },
+  {
+    img: DTH,
+    title: "DTH",
+    route: "/services/dth",
+    desc: "Get Instant 2% Cashback On Mobile Recharge",
+  },
+  {
+    img: Fastag,
+    title: "Fastag",
+    route: "/services/fastag",
+    desc: "Get Instant 2% Cashback On Mobile Recharge",
+  },
+  {
+    img: Digital_Cable,
+    title: " Digital Cable",
+    route: "/services/digitalCable",
+    desc: "Get Instant 2% Cashback On Mobile Recharge",
+  },
+];
+export const PayBillsMenu = [
+  {
+    img: Electricity,
+    title: "Electricity",
+    route: "/services/electricity",
+    desc: "Get Instant 2% Cashback On Mobile Recharge",
+  },
+  {
+    img: Digital_Cable,
+    title: " Digital Cable",
+    route: "/services/digitalCable",
+    desc: "Get Instant 2% Cashback On Mobile Recharge",
+  },
+  {
+    img: LandLine,
+    title: "LandLine",
+    route: "/services/landline",
+    desc: "Get Instant 2% Cashback On Mobile Recharge",
+  },
+  {
+    img: Gas,
+    title: "Gas",
+    route: "/services/gas",
+    desc: "Get Instant 2% Cashback On Mobile Recharge",
+  },
+  {
+    img: Water_Bill,
+    title: "Water Bill",
+    route: "/services",
+    desc: "Get Instant 2% Cashback On Mobile Recharge",
+  },
+  {
+    img: Water_Bill,
+    title: "LPG Gas",
+    route: "/services",
+    desc: "Get Instant 2% Cashback On Mobile Recharge",
+  },
+  {
+    img: Water_Bill,
+    title: "Insurance",
+    route: "/services",
+    desc: "Get Instant 2% Cashback On Mobile Recharge",
+  },
+  {
+    img: Water_Bill,
+    title: "Pay Loan",
+    route: "/services",
+    desc: "Get Instant 2% Cashback On Mobile Recharge",
+  },
+];
+export const FinanceMenu = [
+  {
+    img: Electricity,
+    title: "Loan Repayment",
+    route: "/services/electricity",
+    desc: "Get Instant 2% Cashback On Mobile Recharge",
+  },
+  {
+    img: Digital_Cable,
+    title: " Credit Card",
+    route: "/services/digitalCable",
+    desc: "Get Instant 2% Cashback On Mobile Recharge",
+  },
+  {
+    img: LandLine,
+    title: "Housint Society",
+    route: "/services/landline",
+    desc: "Get Instant 2% Cashback On Mobile Recharge",
+  },
+  {
+    img: Gas,
+    title: "Hospital Bills",
+    route: "/services/gas",
+    desc: "Get Instant 2% Cashback On Mobile Recharge",
+  },
+];
 export default HeaderBottomService;

@@ -1,8 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import ButtonComp from "../Buttons/ButtonComp";
 import Wishlist from "../Buttons/Wishlist";
 import { MdOutlineDeliveryDining, MdTrendingUp } from "react-icons/md";
-import Item from "antd/es/list/Item";
 import { useDispatch } from "react-redux";
 import { browsingProduct } from "../../redux/slices/browsingSlice";
 
@@ -11,6 +10,9 @@ const ProductCard = ({ item }) => {
   const setBrowsingProduct = (product) => {
     dispatch(browsingProduct(product));
   };
+
+console.log("product card");
+
   return (
     <>
       <div className="shadow-md  border m-3 border-gray-200 rounded-lg">
@@ -30,7 +32,7 @@ const ProductCard = ({ item }) => {
         </div>
         <div className="p-2">
           <div className="space-y-0.5">
-            <h2 className="font-semibold">{item?.Name?.slice(0, 30)}...</h2>
+            <h2 className="font-semibold">{item?.Name?.slice(0, 25)}...</h2>
             <h2 className="space-x-2 items-center">
               <span className="text-blue-500 text-lg font-medium">
                 ₹{item?.SalePrice}
@@ -46,7 +48,7 @@ const ProductCard = ({ item }) => {
             </h2>
           </div>
           <div className="flex mt-4 space-x-3 items-center justify-between">
-            <ButtonComp title="Quick View" />
+            <ButtonComp item={item} title="Quick View" />
             <Wishlist item={item} />
           </div>
         </div>

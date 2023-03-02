@@ -1,8 +1,9 @@
-import React from "react";
+import React, { memo } from "react";
 import SectionTitle from "../../components/Common/SectionTitle";
 import ButtonComp from "../../components/Buttons/ButtonComp";
 
 const ShopByCategory = () => {
+  console.log("shop by category");
   return (
     <>
       <div className="new-container mx-auto">
@@ -58,4 +59,4 @@ export const ShopCategoryArr = [
   },
 ];
 
-export default ShopByCategory;
+export default memo(ShopByCategory);

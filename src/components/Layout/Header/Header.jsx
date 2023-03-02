@@ -1,5 +1,5 @@
 import React from "react";
-import { VIPS_LOGO } from "../../../utils/Constants";
+import { VIPS_LOGO, vendorPanelAPi } from "../../../utils/Constants";
 import { Link, NavLink } from "react-router-dom";
 import { FiSearch, FiShoppingCart, FiHeart } from "react-icons/fi";
 import { Badge, Button } from "antd";
@@ -97,6 +97,7 @@ export const TopNavMenu = [
   },
   {
     title: "Become a Supplier",
+    route: vendorPanelAPi,
   },
 ];
 

@@ -6,10 +6,10 @@ import { Link } from "react-router-dom";
 
 const Wishlist = () => {
   const { wishProducts } = useSelector((state) => state.wishlistSlice);
-  console.log(wishProducts, "wishProducts");
+  console.log("wishlist");
   return (
     <>
-      <div className="py-20 container mx-auto">
+      <div className="py-20  container mx-auto">
         <SectionTitle title={"Your Wishlist"} />
         {wishProducts?.length > 0 ? (
           <div className="grid mt-20 grid-cols-5 gap-5">

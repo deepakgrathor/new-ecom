@@ -29,6 +29,7 @@ const Homepage = () => {
       <ServiceCategory />
       <PromotionSection />
       <OnlineStores />
+
       {/* Prime Member VIPS */}
       <AdBanner
         BannerURL="https://www.vipswallet.com/prime"
@@ -40,7 +41,11 @@ const Homepage = () => {
         BannerURL="https://www.vipswallet.com/shopping/Furniture/7"
         BannerImage="https://ik.imagekit.io/43tomntsa/image_1_.png"
       />
-      <PaymentApp />
+      <PaymentApp
+        img="https://www.vipswallet.com/images/home/mobile-app.png"
+        title="India's Most Loved Payment App"
+        desc="VIPS Wallet application is available on Google Play Store and App Store. Download now for a trouble-free shopping experience. ."
+      />
       <BrowsingHistory />
     </div>
   );

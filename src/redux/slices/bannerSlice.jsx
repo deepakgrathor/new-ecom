@@ -37,8 +37,8 @@ const bannerSlice = createSlice({
       state.loading = false;
     });
     builder.addCase(getSliderBannerImage.rejected, (state, action) => {
-      state.loading = false;
       state.error = action.error;
+      state.loading = false;
     });
   },
 });

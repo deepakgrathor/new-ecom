@@ -6,15 +6,21 @@ import Wishlist from "../pages/Shopping/WIshlist/Wishlist";
 import Header from "../components/Layout/Header/Header";
 import OnlineStorePage from "../pages/OnlineStore/OnlineStorePage";
 import ShoppingHome from "../pages/Shopping/ShoppingHome";
+import ServiceHome from "../pages/Services/ServiceHome";
+import QuickViewModal from "../components/Modal/QuickViewModal";
+import ProductList from "../pages/Shopping/ProductList";
 
 const Router = () => {
   return (
     <>
       <Header />
+      <QuickViewModal />
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/shopping" element={<ShoppingHome />} />
+        <Route path="/services" element={<ServiceHome />} />
         <Route path="/wishlist" element={<Wishlist />} />
+        <Route path="/shopping/:catname" element={<ProductList />} />
         <Route path="/online-stores" element={<OnlineStorePage />} />
       </Routes>
       <Footer />

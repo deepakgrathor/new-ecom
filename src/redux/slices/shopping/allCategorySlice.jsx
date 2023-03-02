@@ -15,26 +15,72 @@ export const getAllCategories = createAsyncThunk(
     }
   }
 );
+export const getSubCategory = createAsyncThunk(
+  "getSubCategory",
+  async (categoryId) => {
+    try {
+      const res = await axios.get(
+        `${baseApiUrl}/EcommerceServices/GetSubcategorieList?tocken=XMCNBVGDTE734BCU65DW&Categoryid=${categoryId}`
+      );
+      return res.data;
+    } catch (error) {
+      return error;
+    }
+  }
+);
+
+// export const getSubCategory = (categoryId) => {
+//   const formData = new FormData();
+
+//   return fetch(
+//     `${baseApiUrl}/EcommerceServices/GetSubcategorieList?tocken=XMCNBVGDTE734BCU65DW&Categoryid=${categoryId}`,
+//     {
+//       method: "GET",
+//     }
+//   )
+//     .then((data) => {
+//       return data.json();
+//     })
+//     .catch((err) => {});
+// };
 
 const allCategorySlice = createSlice({
   name: "allCategorySlice",
   initialState: {
-    allCat: [],
-    loading: false,
-    error: "",
+    allCategory: {
+      allCat: [],
+      loading: false,
+      error: "",
+    },
+    getSubCatbyCat: {
+      subCat: "",
+      loading: false,
+      error: "",
+    },
   },
   reducers: {},
   extraReducers: (builder) => {
     builder.addCase(getAllCategories.pending, (state, action) => {
-      state.loading = true;
+      state.allCategory.loading = true;
     });
     builder.addCase(getAllCategories.fulfilled, (state, action) => {
-      state.allCat = action.payload;
+      state.allCategory.allCat = action.payload;
       state.loading = false;
     });
     builder.addCase(getAllCategories.rejected, (state, action) => {
-      state.loading = false;
-      state.error = action.error;
+      state.allCategory.loading = false;
+      state.allCategory.error = action.error;
+    });
+    builder.addCase(getSubCategory.pending, (state, action) => {
+      state.getSubCatbyCat.loading = true;
+    });
+    builder.addCase(getSubCategory.fulfilled, (state, action) => {
+      state.getSubCatbyCat.subCat = action.payload;
+      state.getSubCatbyCat.loading = false;
+    });
+    builder.addCase(getSubCategory.rejected, (state, action) => {
+      state.getSubCatbyCat.loading = false;
+      state.getSubCatbyCat.error = action.error;
     });
   },
 });

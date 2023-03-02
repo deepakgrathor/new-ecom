@@ -17,7 +17,7 @@ const DealsOfTheDay = () => {
     <>
       <div className="">
         <SectionTitle
-          title={"Deals"}
+          title={"Deals "}
           SubTitle={"of the Day"}
           description={
             "Exciting, fresh deals on a daily basis. Buy your wishlist products at low cost!"

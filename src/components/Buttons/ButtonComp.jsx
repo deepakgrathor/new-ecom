@@ -1,15 +1,20 @@
 import React from "react";
-
-const ButtonComp = ({ title, width }) => {
+import { useDispatch } from "react-redux";
+import { openCloseModal } from "../../redux/slices/quickViewSlice";
+const ButtonComp = ({ title, width, item, bg }) => {
+  const dispatch = useDispatch();
   return (
     <>
       <div
+        onClick={() => dispatch(openCloseModal(item))}
         className={`flex ${
           width ? "w-32" : "w-full"
-        } mx-auto cursor-pointer border-gray-600 rounded-md  border py-2 justify-center`}
+        } mx-auto cursor-pointer border-gray-300 rounded-md  border py-2 justify-center ${
+          bg ? bg : "text-black bg-white"
+        }`}
       >
         <div className="">
-          <button className={`text-black  ${width ? width : "w-full"} px-7`}>
+          <button className={` font-medium tracking-wider  ${width ? width : "w-full"} px-7`}>
             {title}
           </button>
         </div>

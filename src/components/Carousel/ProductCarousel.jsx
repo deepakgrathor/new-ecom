@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import ProductCard from "../Shopping/ProductCard";
@@ -63,4 +63,4 @@ const ProductCarousel = ({ product, loading, onlineStore }) => {
   );
 };
 
-export default ProductCarousel;
+export default memo(ProductCarousel);

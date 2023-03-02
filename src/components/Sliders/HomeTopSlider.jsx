@@ -1,10 +1,11 @@
-import React, { useEffect } from "react";
+import React, { memo, useEffect } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { useDispatch, useSelector } from "react-redux";
 import { getSliderBannerImage } from "../../redux/slices/bannerSlice";
 import Loader from "../Common/Loader";
 import HomeBottomService from "../Layout/Header/HomeBottomService";
+import { HeaderBottomMenu } from "../Layout/Header/HeaderBottomService";
 
 const HomeTopSlider = ({ show }) => {
   const dispatch = useDispatch();
@@ -29,7 +30,8 @@ const HomeTopSlider = ({ show }) => {
   };
   useEffect(() => {
     dispatch(getSliderBannerImage());
-  }, []);
+  }, [dispatch]);
+  console.log("top slider");
   return (
     <>
       <div className="">
@@ -66,10 +68,10 @@ const HomeTopSlider = ({ show }) => {
         ) : (
           <Loader />
         )}
-        {!show && <HomeBottomService />}
+        {!show && <HomeBottomService data={HeaderBottomMenu} />}
       </div>
     </>
   );
 };
 
-export default HomeTopSlider;
+export default memo(HomeTopSlider);

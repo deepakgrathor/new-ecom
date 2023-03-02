@@ -1,7 +1,6 @@
 import React from "react";
-import { HeaderBottomMenu } from "./HeaderBottomService";
 
-const HomeBottomService = ({ grid, bg }) => {
+const HomeBottomService = ({ grid, bg, data }) => {
   return (
     <>
       <div
@@ -15,21 +14,25 @@ const HomeBottomService = ({ grid, bg }) => {
               : "flex items-center justify-evenly"
           } `}
         >
-          {HeaderBottomMenu.map((e) => {
-            return (
-              <div
-                className={` ${
-                  grid ? "p-5" : "py-4"
-                } hover:scale-105 duration-300 cursor-pointer text-center space-y-1`}
-              >
-                <img className="w-16 mx-auto" src={e.img} alt="" />
-                <h2 className="font-semibold tracking-wide text-center">
-                  {e.title}
-                </h2>
-                {grid && <p className="w-52 mx-auto">{e.desc}</p>}
-              </div>
-            );
-          })}
+          {data ? (
+            data?.map((e) => {
+              return (
+                <div
+                  className={` ${
+                    grid ? "p-5" : "py-4"
+                  } hover:scale-105 duration-300 cursor-pointer text-center space-y-1`}
+                >
+                  <img className="w-16 mx-auto" src={e.img} alt="" />
+                  <h2 className="font-semibold tracking-wide text-center">
+                    {e?.title}
+                  </h2>
+                  {grid && <p className="w-52 mx-auto">{e.desc}</p>}
+                </div>
+              );
+            })
+          ) : (
+            <h2>Loading.....</h2>
+          )}
         </div>
       </div>
     </>

@@ -1,6 +1,7 @@
-import React from "react";
+import React, { memo } from "react";
 
 const AdBanner = ({ BannerImage, BannerURL }) => {
+  console.log("chl re");
   return (
     <>
       <div
@@ -13,4 +14,4 @@ const AdBanner = ({ BannerImage, BannerURL }) => {
   );
 };
 
-export default AdBanner;
+export default memo(AdBanner);

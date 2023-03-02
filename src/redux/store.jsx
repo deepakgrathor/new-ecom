@@ -6,6 +6,7 @@ import onlineStoreSlice from "./slices/onlineStoreSlice";
 import productSlice from "./slices/shopping/productSlice";
 import allCategorySlice from "./slices/shopping/allCategorySlice";
 import wishlistSlice from "./slices/wishlistSlice";
+import quickViewSlice from "./slices/quickViewSlice";
 
 const { configureStore } = require("@reduxjs/toolkit");
 
@@ -19,6 +20,7 @@ const store = configureStore({
     browsingSlice: browsingSlice,
     wishlistSlice: wishlistSlice,
     allCategorySlice: allCategorySlice,
+    quickViewSlice: quickViewSlice,
   },
 });
 

@@ -14,9 +14,10 @@ import {
   getProductsByCategory,
 } from "../../redux/slices/shopping/productSlice";
 import { electronicCategoryId, fashionCategoryId } from "../../utils/Constants";
+import { Link } from "react-router-dom";
 
 const ShoppingHome = () => {
-  const { allCat } = useSelector((state) => state.allCategorySlice);
+  const { allCat } = useSelector((state) => state.allCategorySlice.allCategory);
   const { data, loading } = useSelector(
     (state) => state.productSlice.newArrivalProduct
   );
@@ -64,8 +65,10 @@ const ShoppingHome = () => {
               ?.filter((a) => a.Id !== 33)
               .map((e) => {
                 return (
-                  <div
-                    onClick={(a) => window?.open(e.Url, "_blank")}
+                  <Link
+                    key={e.Id}
+                    to={`/shopping/${e.Name}`}
+                    state={e.Id}
                     className="text-center space-y-2 justify-center flex flex-col items-center"
                   >
                     <img
@@ -76,7 +79,7 @@ const ShoppingHome = () => {
                     <h2 className="text-center font-semibold text-xl">
                       {e?.Name}
                     </h2>
-                  </div>
+                  </Link>
                 );
               })}
           </Carousel>
