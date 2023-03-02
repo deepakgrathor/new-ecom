@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { memo, useEffect, useState } from "react";
 import { AiFillDelete, AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 import { useDispatch, useSelector } from "react-redux";
 import { addWish, removeWish } from "../../redux/slices/wishlistSlice";
@@ -24,7 +24,7 @@ const Wishlist = ({ item }) => {
             ? RemoveWishList
             : AddtoWishList
         }
-        className="border cursor-pointer border-gray-600 p-2 rounded-lg"
+        className="border cursor-pointer bg-white border-gray-300 p-2 rounded-lg"
       >
         {wishProducts && wishProducts.some((p) => p?.Id === item?.Id) ? (
           pathname === "/wishlist" ? (
@@ -40,4 +40,4 @@ const Wishlist = ({ item }) => {
   );
 };
 
-export default Wishlist;
+export default memo(Wishlist);
