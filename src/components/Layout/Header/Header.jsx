@@ -96,6 +96,10 @@ export const TopNavMenu = [
     route: "/online-stores",
   },
   {
+    title: "Digi Gold",
+    route: "/digigold",
+  },
+  {
     title: "Become a Supplier",
     route: vendorPanelAPi,
   },

@@ -2,6 +2,7 @@ export const VIPS_LOGO = "https://ik.imagekit.io/43tomntsa/VipsLogoMain.png";
 
 const themeColor = "#393186";
 export const baseApiUrl = "https://api.vipswallet.com/api";
+export const digiBaseUrl = "http://testnew.vipswallet.com/api/DigiGold/";
 // export const baseApiUrl = "http://webplat.vipswallet.com/api/";
 export const shopadminUrl = "http://shopadmin.vipswallet.com";
 export const vendorPanelAPi = "http://vendor.vipswallet.com/Login/Vendor";
